@@ -12,9 +12,6 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.colors.background};
     font-size: 16px;
     color: ${({ theme }) => theme.colors.fontColor.main};
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
   }
 
   button {

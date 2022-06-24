@@ -2,20 +2,23 @@
 
 import Product from '../../components/Product';
 // import { AppContext } from '../../contexts/AppContext';
-import { productArr } from '../../services/ProductsService';
+import { productData } from '../../services/ProductsService';
+
+import formatCurrency from '../../utils/formatCurrecy';
 
 import {
-  Header, Line, ProductContainer, Footer, 
+  Header, ProductContainer, Footer, Container, 
 } from './styles';
 
 function MyCart() {
   // const { theme, handleToggleTheme } = useContext(AppContext);
-  const { items } = productArr;
+  const { totalizers, items } = productData;
+  console.log(productData);
 
   return (
-    <>
+    <Container>
       <Header>
-        <h2>Meu carrinho</h2>
+        <h3>Meu carrinho</h3>
         {/* <button
           type="button"
           onClick={handleToggleTheme}
@@ -23,8 +26,6 @@ function MyCart() {
             {theme === 'dark' ? '🌞' : '🌚'}
           </button> */}
       </Header>
-
-      <Line />
 
       <ProductContainer>
         {items.map((product) => (
@@ -40,9 +41,19 @@ function MyCart() {
       </ProductContainer>
       
       <Footer>
+        <div>
+          <p>Total</p>
+          <span>
+            <p>{formatCurrency(totalizers[0].value)}</p>
+            <p>{formatCurrency(productData.value)}</p>
+          </span>
+        </div>
 
+        <div>
+          <button>Finalizar compra</button>
+        </div>    
       </Footer>
-    </>
+    </Container>
   );
 }
 

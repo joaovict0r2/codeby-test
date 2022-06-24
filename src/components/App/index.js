@@ -14,7 +14,7 @@ function App() {
   const { theme } = useContext(AppContext);
 
   const currentTheme = useMemo(() => {
-    return themes[theme] || themes.dark;
+    return themes.light || themes.dark;
   }, [theme]);
   
   return (

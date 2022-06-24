@@ -5,6 +5,6 @@ export default {
       main: '#000000',
       light: '#c2c2c2',
     },
-    buttonColor: '#3346F0',
+    buttonColor: '#3288ff',
   },
 };

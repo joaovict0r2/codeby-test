@@ -1,4 +1,4 @@
-export const productArr = {
+export const productData = {
   value: 657,
   items: [
     {

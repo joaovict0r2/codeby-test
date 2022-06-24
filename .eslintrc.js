@@ -61,5 +61,6 @@ module.exports = {
     'max-len': 'off',
     'arrow-body-style': 'off',
     'prefer-template': 'off',
+    'linebreak-style': 'off',
   },
 };
