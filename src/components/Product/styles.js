@@ -11,10 +11,15 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   width: 95px;
-  height: 95px;
+  height: auto;
   object-fit: contain;
   background: #fff;
-  border: 1px solid ${({ theme }) => theme.colors.fontColor.light} ;
+  border: 1px solid ${({ theme }) => theme.colors.fontColor.light};
+
+  @media (min-width: 520px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const ProductContent = styled.div`
@@ -31,16 +36,28 @@ export const Title = styled.p`
   &:first-letter {
     text-transform: uppercase;
   }
+  
+  @media (min-width: 520px) {
+    font-size: 15px;
+  }
 `;
 
 export const Price = styled.p`
   font-size: 11px;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.fontColor.light};
+
+  @media (min-width: 520px) {
+    font-size: 13px;
+  }
 `;
 
 export const SellingPrice = styled.p`
   font-size: 13px;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.fontColor.main};
+
+  @media (min-width: 520px) {
+    font-size: 15px;
+  }
 `;
